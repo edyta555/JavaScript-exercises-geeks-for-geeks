@@ -11,9 +11,12 @@
     Solution:
         1. Sort input array using a O(n Log n) algorithm. 
         2. We maintain two pointers, one from beginning and one from end in sorted array. We alternatively print elements pointed by two pointers and move them toward each other.
+
+    Time Complexity: O(n Log n) 
+    Auxiliary Space : O(1), since no extra space has been taken.
 */
 
-function alternative_sorting(sampleArray) {
+function alternativeSorting(sampleArray) {
   sampleArray.sort((a, b) => a - b);
   const arrayLength = sampleArray.length;
   let alternativeSortedArray = [];
@@ -31,7 +34,7 @@ function alternative_sorting(sampleArray) {
   return alternativeSortedArray;
 }
 
-const oddLengthArray = alternative_sorting([7, 1, 2, 3, 4, 5, 6]);
+const oddLengthArray = alternativeSorting([7, 1, 2, 3, 4, 5, 6]);
 console.log("alternative sorted array: ", oddLengthArray);
-const eventLengthArray = alternative_sorting([1, 6, 9, 4, 3, 7, 8, 2]);
+const eventLengthArray = alternativeSorting([1, 6, 9, 4, 3, 7, 8, 2]);
 console.log("alternative sorted array: ", eventLengthArray);
